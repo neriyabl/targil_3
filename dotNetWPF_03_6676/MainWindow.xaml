@@ -1,0 +1,26 @@
+﻿<Window x:Class="dotNetWPF_03_6676.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dotNetWPF_03_6676"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="printersGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <local:PrinterUserControl x:Name="printer1"/>
+            <local:PrinterUserControl x:Name="printer2" Grid.Column="1"/>
+            <local:PrinterUserControl x:Name="printer3" Grid.Column="2"/>
+        </Grid>
+        <Button Name="printButton" Content="Print" Grid.Row="1" FontSize="36" MinHeight="20" MinWidth="100" Margin="10" Click="printButton_Click"/>
+    </Grid>
+</Window>
